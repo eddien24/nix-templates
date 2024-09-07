@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-latexindent.pl -wd -s src/index.tex
 pkill zathura
 pkill tectonic
-pushd src
+pushd src > /dev/null
+latexindent.pl -wd -s index.tex
 rm -f index.bak* indent.log
-popd
+popd > /dev/null

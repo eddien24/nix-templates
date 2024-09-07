@@ -1,5 +1,5 @@
 build:
-    tectonic -X build
+    tectonic -X build 2>&1 > /dev/null &
 
 watch:
-    tectonic -X watch
+    tectonic -X watch 2>&1 > /dev/null &

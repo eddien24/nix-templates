@@ -25,6 +25,7 @@
           shellHook = ''
             just watch 2>&1 > /dev/null &
             zathura build/default/default.pdf 2>&1 > /dev/null &
+            nvim src/index.tex
             trap "./exit.sh" EXIT
           '';
         };
