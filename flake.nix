@@ -1,6 +1,5 @@
 {
   outputs = {self}: {
-    templates.tex.path = ./tex;
-    defaultTemplate = self.templates.tex;
+      templates.default.path = ./tex;
   };
 }
