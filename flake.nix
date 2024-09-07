@@ -12,7 +12,8 @@
       system: let
         pkgs = import nixpkgs {inherit system;};
       in {
-        # Used by `nix develop`
+        templates.tex.path = ./.;
+
         devShells.default = pkgs.mkShell rec {
           buildInputs = with pkgs; [
             just
