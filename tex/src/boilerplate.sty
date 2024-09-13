@@ -1,0 +1,23 @@
+% Packages
+\RequirePackage{amsmath, amssymb, amsfonts}
+
+% No indenting in sections unless explicitly noted
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+% Better implies
+\renewcommand{\implies}{\rightarrow}
+
+% Note macros
+\newcommand{\defn}{\textbf{Def:} }
+\newcommand{\ex}{\textbf{Ex:} }
+
+% Nice shortcuts
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\pow}{{\mathcal{P}}}
