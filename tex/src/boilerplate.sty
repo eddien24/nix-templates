@@ -1,11 +1,14 @@
 % Packages
-\RequirePackage{amsmath, amssymb, amsfonts}
+\RequirePackage{amsmath, amssymb, amsfonts, cancel, etoolbox}
 
 % No indenting in sections unless explicitly noted
 \newlength\tindent
 \setlength{\tindent}{\parindent}
 \setlength{\parindent}{0pt}
 \renewcommand{\indent}{\hspace*{\tindent}}
+
+% Sections start on new page except for first
+\preto\section{\ifnum\value{section}=0\else\clearpage\fi}
 
 % Better defaults 
 \renewcommand{\implies}{\rightarrow}
@@ -20,6 +23,8 @@
 \renewcommand{\(}{\left(}
 \renewcommand{\)}{\right)}
 \newcommand{\qed}{\square}
+\newcommand{\lcm}{\text{lcm}}
+\renewcommand{\gcd}{\text{gcd}}
 
 \newcommand{\N}{\mathbb{N}}
 \renewcommand{\P}{\mathbb{P}}
