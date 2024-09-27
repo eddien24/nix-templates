@@ -1,9 +1,14 @@
 % Math Packages
 \RequirePackage{amsmath, amssymb, amsfonts, cancel}
 
-% Better sections
-\RequirePackage{etoolbox} 
-\preto\section{\ifnum\value{section}=0\else\clearpage\fi}
+% Problem define
+\newcounter{probnum}
+\setcounter{probnum}{1}
+\newcommand{\problem}{
+    \ifnum\value{probnum}=1\else\clearpage\fi
+    \section*{Problem \arabic{probnum}}
+    \stepcounter{probnum}
+}
 
 % Better heading
 \RequirePackage{fancyhdr}
