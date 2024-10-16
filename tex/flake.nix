@@ -22,6 +22,7 @@
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
 
           shellHook = ''            \
+                        chmod +x exit.sh
                         tectonic -X watch 2>&1 > /dev/null &
                         zathura build/default/default.pdf 2>&1 > /dev/null &
                         $EDITOR src/index.tex
