@@ -24,7 +24,9 @@
           shellHook = ''            \
                         chmod +x exit.sh
                         tectonic -X watch 2>&1 > /dev/null &
+                        export TECTONICPID=$!
                         zathura build/default/default.pdf 2>&1 > /dev/null &
+                        export ZATHURAPID=$!
                         $EDITOR src/index.tex
                         trap "./exit.sh" EXIT
           '';

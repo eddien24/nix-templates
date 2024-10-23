@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-pkill zathura
-pkill tectonic
+kill $ZATHURAPID
+kill $TECTONICPID
 pushd src > /dev/null
 latexindent.pl -wd -s index.tex
 rm -f index.bak* indent.log
