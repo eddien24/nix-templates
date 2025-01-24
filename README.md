@@ -1,5 +1,3 @@
-# LaTeX Template with Flakes
+# Flake Templates
 
-Nix shell template for LaTeX work. Modified with a shell hook from
-[MordragT/nix-templates](https://github.com/MordragT/nix-templates/tree/master/tex)
-
+Nix shell templates made for my personal needs :D
