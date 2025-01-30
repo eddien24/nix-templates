@@ -1,8 +1,10 @@
-#let name = "Awesome"
-#let title = "Homework"
-#let date = "4.20.69"
-#set page(header: [
-  #smallcaps[#name] #h(1fr)
-  #smallcaps[#title] #h(1fr)
-  #smallcaps[#date]
-])
+#import "conf.typ": *
+#show: conf.with(
+  name: "Hiya",
+  date: "4.20.69",
+  title: "Awesome",
+)
+
+
+#prob[1]
+Hello, world :D #qed
