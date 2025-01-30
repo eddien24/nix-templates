@@ -16,6 +16,8 @@
             typst
             typstyle
             tinymist
+            zathura 
+            tmux
           ];
 
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;

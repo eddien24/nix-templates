@@ -1,3 +1,3 @@
 # Typst Template
 
-Nix shell template for typst. Needs tmux and zathura for the shell hook.
+Nix shell template for typst. Has a shell hook for ease of use.
