@@ -27,18 +27,10 @@
             tmux new-session -ds typst "typst watch main.typ main.pdf"
             zathura main.pdf 2>&1 > /dev/null &
             export ZATHURAPID=$!
+            export EXIT_PATH=$(realpath ./exit.sh)
             $EDITOR main.typ
-            trap "./exit.sh" EXIT
+            trap $(echo $EXIT_PATH) EXIT
           '';
-          # shellHook = ''            \
-          #               chmod +x exit.sh
-          #               typst watch main.typ main.pdf 2>&1 > /dev/null &
-          #               export TYPSTPID=$!
-          #               zathura main.pdf 2>&1 > /dev/null &
-          #               export ZATHURAPID=$!
-          #               $EDITOR main.typ
-          #               trap "./exit.sh" EXIT
-          # '';
         };
       }
     );
