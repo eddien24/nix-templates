@@ -1,8 +1,8 @@
 #import "conf.typ": *
 #show: conf.with(
-  name: "Hiya",
-  date: "4.20.69",
-  title: "Awesome",
+  left: "Hiya",
+  middle: "Awesome",
+  right: "4.20.69",
 )
 
 

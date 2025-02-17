@@ -1,13 +1,13 @@
 #let conf(
-  name: "Hiya",
-  title: "A Title",
-  date: "4.20.69",
+  left: "Hiya",
+  middle: "A Title",
+  right: "4.20.69",
   doc,
 ) = {
   set page(header: [
-    #smallcaps[#name] #h(1fr)
-    #smallcaps[#title] #h(1fr)
-    #smallcaps[#date]
+    #smallcaps[#left] #h(1fr)
+    #smallcaps[#middle] #h(1fr)
+    #smallcaps[#right]
   ])
 
   show heading: it => {
