@@ -17,6 +17,10 @@
             tectonic
             zathura
             perl538Packages.LatexIndent
+
+            # For treesitter to work 
+            tree-sitter
+            nodejs_24
           ];
 
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
