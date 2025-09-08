@@ -1,5 +1,5 @@
 {
-  description = "Flake for developing LaTex using Tectonic, Zathura, and shell hooks";
+  description = "Flake for developing LaTeX using Tectonic, Zathura, and shell hooks";
 
   inputs.utils.url = "github:numtide/flake-utils";
 
@@ -20,7 +20,7 @@
 
             # For treesitter to work 
             tree-sitter
-            nodejs_24
+            nodejs_18
           ];
 
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
@@ -31,8 +31,9 @@
                         export TECTONICPID=$!
                         zathura build/default/default.pdf 2>&1 > /dev/null &
                         export ZATHURAPID=$!
+                        export EXIT_PATH=$(realpath ./exit.sh)
                         $EDITOR src/index.tex
-                        trap "./exit.sh" EXIT
+                        trap $EXIT_PATH EXIT
           '';
         };
       }
