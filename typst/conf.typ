@@ -31,3 +31,5 @@
   h(1fr)
   $square.stroked$
 }
+
+#let angled(body) = $angle.l body angle.r$
