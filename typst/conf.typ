@@ -33,3 +33,4 @@
 }
 
 #let angled(body) = $angle.l body angle.r$
+#let apostrophe = sym.quote.single.r
