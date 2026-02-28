@@ -34,3 +34,7 @@
 
 #let angled(body) = $angle.l body angle.r$
 #let apostrophe = sym.quote.single.r
+#let modring(num) = $ZZ slash num ZZ$
+#let unitring(num) = $(ZZ slash num ZZ)^times$
+#let modulo(num) = $space (mod num)$
+#let ord = math.op("ord")
