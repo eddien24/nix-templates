@@ -20,6 +20,21 @@
   set par(justify: true)
   set enum(numbering: "a.i.")
 
+  show quote.where(block: true): it => {
+    rect(
+      stroke: (left: 2pt + rgb("#d0d7de")), // vertical line
+      inset: (left: 1em, top: 0.5em, bottom: 0.5em, right: 0em),
+      radius: 0pt,
+      width: 100%,
+      {
+        set text(style: "italic", fill: rgb("#57606a"))
+        it.body
+      },
+    )
+  }
+
+  set quote(block: true)
+
   doc
 }
 
@@ -38,3 +53,12 @@
 #let unitring(num) = $(ZZ slash num ZZ)^times$
 #let modulo(num) = $space (mod num)$
 #let ord = math.op("ord")
+#let finfield(num) = $FF_p^*$
+#let spacebreak = {
+  linebreak()
+  h(1fr)
+  sym.diamond.filled
+  h(1fr)
+  linebreak()
+  linebreak()
+}
