@@ -27,10 +27,24 @@
       radius: 0pt,
       width: 100%,
       {
-        set text(style: "italic", fill: rgb("#57606a"))
+        set text(fill: rgb("#57606a"))
         it.body
       },
     )
+
+    if it.attribution != none {
+      align(end, text(size: 0.85em, style: "italic")[#it.attribution])
+    }
+
+    let bib = yaml("refs.yml")
+    show ref: it => {
+      let key = repr(it.target).slice(1, -1)
+      if key in bib {
+        it
+      } else {
+        it.target
+      }
+    }
   }
 
   set quote(block: true)
